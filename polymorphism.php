@@ -1,61 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning OOPS</title>
-</head>
+// ! This is an object orientted concept where same function can be used for diffrent purposes.
+// ! See below snippet for example.
 
-<body>
-    <?php
-  interface EmployeeDetails
+
+
+interface EmployeeDetails
+{
+  // * define method signature
+  public function role();
+}
+
+class Jailadin implements EmployeeDetails
+{
+  public function role()
   {
-    // * define method signature
-    public function role();
+    return "PHP Developer  and Head";
   }
+}
 
-  class Jailadin implements EmployeeDetails
+class Kamlesh implements EmployeeDetails
+{
+  public function role()
   {
-    public function role()
-    {
-      return "PHP Developer  and Head";
-    }
+    return "Brand Manager";
   }
+}
 
-  class Kamlesh implements EmployeeDetails
+class Ram implements EmployeeDetails
+{
+  public function role()
   {
-    public function role()
-    {
-      return "Brand Manager";
-    }
+    return "Full Stack Developer";
   }
-
-  class Ram implements EmployeeDetails
-  {
-    public function role()
-    {
-      return "Full Stack Developer";
-    }
-  }
+}
 
 
-  function getEmployeeDetails(EmployeeDetails $employee)
-  {
-    return "My name is " . get_class($employee) . ", and My Role is " . $employee->role();
-  }
+function getEmployeeDetails(EmployeeDetails $employee)
+{
+  return "My name is " . get_class($employee) . ", and My Role is " . $employee->role();
+}
 
-  echo getEmployeeDetails(new Jailadin);
-  echo "<br>";
-  echo getEmployeeDetails(new Kamlesh);
-  echo "<br>";
-  echo getEmployeeDetails(new Ram);
-  echo "<br>";
-
-
-  ?>
-
-</body>
-
-</html>
+echo getEmployeeDetails(new Jailadin);
+echo "<br>";
+echo getEmployeeDetails(new Kamlesh);
+echo "<br>";
+echo getEmployeeDetails(new Ram);
+echo "<br>";

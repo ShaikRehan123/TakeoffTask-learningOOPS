@@ -1,4 +1,7 @@
 <?php
+// ! Classes are contstructers that are used to create objects.
+// ! Classes are used to create objects.
+
 
 class Employee
 {

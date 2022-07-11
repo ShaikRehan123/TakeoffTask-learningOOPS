@@ -1,6 +1,9 @@
 <?php
 
 // ! Overriding is when a child class method overrides a parent class method.
+// ! See below snippet for example.
+
+
 
 class ParentClass
 {
