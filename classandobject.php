@@ -12,10 +12,9 @@ class Employee
     public $email;
     public $office;
 
-    public function __construct($name, $salary, $position, $department, $email, $office)
+    public function __construct($name, $position, $department, $email, $office)
     {
         $this->name = $name;
-        $this->salary = $salary;
         $this->position = $position;
         $this->department = $department;
         $this->email = $email;
@@ -25,7 +24,6 @@ class Employee
     public function __toString()
     {
         return "Name: " . $this->name . "<br>" .
-            "Salary: " . $this->salary . "<br>" .
             "Position: " . $this->position . "<br>" .
             "Department: " . $this->department . "<br>" .
             "Email: " . $this->email . "<br>" .
@@ -41,7 +39,6 @@ class Employee
 
 $Kamalesh = new Employee(
     "kamalesh Kar",
-    "100000",
     "Brand Manager",
     "IT",
     "kamaleshkar@ymtsindia.org",
@@ -49,7 +46,6 @@ $Kamalesh = new Employee(
 );
 $Jailadin = new Employee(
     "Jailadin Shaik",
-    "75000",
     "Programmer and Head",
     "IT",
     "jailadin@ymtsindia.org",
@@ -57,7 +53,6 @@ $Jailadin = new Employee(
 );
 $Ram = new Employee(
     "Ram Enjuman",
-    "30000",
     "Full Stack Developer",
     "IT",
     "ramenjuman@ymtsindia.org",
